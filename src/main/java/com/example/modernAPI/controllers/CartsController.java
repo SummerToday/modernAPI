@@ -3,6 +3,7 @@ package com.example.modernAPI.controllers;
 import static org.springframework.http.ResponseEntity.ok;
 
 import com.packt.modern.api.CartApi;
+import com.packt.modern.api.model.Cart;
 import com.packt.modern.api.model.Item;
 import java.util.Collections;
 import java.util.List;
@@ -24,9 +25,8 @@ public class CartsController implements CartApi {
         return ok(Collections.EMPTY_LIST);
     }
 
-    @Override
-    public ResponseEntity<List<Item>> getCartByCustomerId(String customerId){
-        throw new RuntimeException("수동 예외 발생 (Manual Exception thrown)");
+    public ResponseEntity<List<Cart>> getCartByCustomerId(String customerId) {
+        throw new RuntimeException("Manual Exception thrown");
     }
 
 }
