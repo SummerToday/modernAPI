@@ -1,4 +1,5 @@
-package com.packt.modern.api.exceptions;
+package com.example.modernAPI.exceptions;
+
 
 /**
  * @author : github.com/sharmasourabh
@@ -20,7 +21,7 @@ public class ErrorUtils {
      * @return error
      */
     public static Error createError(final String errMsgKey, final String errorCode,
-                                    final Integer httpStatusCode) {
+                                              final Integer httpStatusCode) {
         Error error = new Error();
         error.setMessage(errMsgKey);
         error.setErrorCode(errorCode);

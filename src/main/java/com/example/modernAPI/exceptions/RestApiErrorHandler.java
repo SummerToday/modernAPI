@@ -1,4 +1,4 @@
-package com.packt.modern.api.exceptions;
+package com.example.modernAPI.exceptions;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import java.util.Locale;

@@ -1,7 +1,9 @@
+package com.example.modernAPI.exceptions;
+
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
+
 @Getter
 public enum ErrorCode {
     // Internal Errors: 1 to 0999
