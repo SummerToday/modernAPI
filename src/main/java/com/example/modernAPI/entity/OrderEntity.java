@@ -1,6 +1,7 @@
 package com.example.modernAPI.entity;
 
-import com.packt.modern.api.model.Order.StatusEnum;
+
+import com.packt.modern.api.model.Order;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -26,7 +27,7 @@ public class OrderEntity {
 
   @Column(name = "STATUS")
   @Enumerated(EnumType.STRING)
-  private StatusEnum status;
+  private Order.StatusEnum status;
 
   @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   @JoinColumn(name="CUSTOMER_ID", nullable=false)
@@ -80,11 +81,11 @@ public class OrderEntity {
     return this;
   }
 
-  public StatusEnum getStatus() {
+  public Order.StatusEnum getStatus() {
     return status;
   }
 
-  public OrderEntity setStatus(StatusEnum status) {
+  public OrderEntity setStatus(Order.StatusEnum status) {
     this.status = status;
     return this;
   }

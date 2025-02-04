@@ -10,11 +10,10 @@ import java.util.Objects;
 import java.util.UUID;
 
 
-@Getter
-@Setter
 @Entity
 @Table(name = "cart")
 public class CartEntity {
+
     @Id
     @GeneratedValue
     @Column(name = "ID", updatable = false, nullable = false)
@@ -32,6 +31,33 @@ public class CartEntity {
             inverseJoinColumns = @JoinColumn(name = "ITEM_ID")
     )
     private List<ItemEntity> items = new ArrayList<>();
+
+    public UUID getId() {
+        return id;
+    }
+
+    public CartEntity setId(UUID id) {
+        this.id = id;
+        return this;
+    }
+
+    public UserEntity getUser() {
+        return user;
+    }
+
+    public CartEntity setUser(UserEntity user) {
+        this.user = user;
+        return this;
+    }
+
+    public List<ItemEntity> getItems() {
+        return items;
+    }
+
+    public CartEntity setItems(List<ItemEntity> items) {
+        this.items = items;
+        return this;
+    }
 
     @Override
     public boolean equals(Object o) {
